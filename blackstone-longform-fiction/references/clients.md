@@ -10,7 +10,7 @@
 
 | 客户端 | 全局技能目录 | 项目内目录 | 云端连接 |
 |---|---|---|---|
-| WorkBuddy | `~/.workbuddy/skills/` | — | 全自动 |
+| WorkBuddy | `~/.workbuddy/skills/` | — | 授权后自动合并连接配置 |
 | Claude Code | `~/.claude/skills/` | — | 手工粘贴一次配置 |
 | Codex | `~/.codex/skills/` | `.agents/skills/` | 手工粘贴一次配置 |
 | Cursor | `~/.cursor/skills/` | — | 手工粘贴一次配置 |
@@ -27,7 +27,7 @@
 
 ## 云端连接那一列的含义
 
-- **全自动**：授权之后，由你把连接配置直接写进本机，作者不需要接触任何配置文件。流程见 [account.md](account.md)。
+- **授权后自动合并连接配置**：仅适用于 WorkBuddy。作者明确同意连接云端后，只增改 `blackstone` 条目，不覆盖其他设置。流程见 [account.md](account.md)。
 - **手工粘贴一次配置**：授权流程一样由你完成，但写入配置这一步目前只在 WorkBuddy 上做了自动化。其他客户端要请作者到 `https://blackstone.wansu.tech/app/connect` 复制一次配置粘贴进去，这是一次性的。
 
 **不要为了走完流程去猜测某个客户端的 MCP 配置文件在哪、格式是什么。**猜错会写坏作者的配置，而这比多让他粘贴一次严重得多。
