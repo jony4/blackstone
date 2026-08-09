@@ -63,11 +63,11 @@ Content-Type: application/json
     "client_version": "<客户端版本，取不到就省略>",
     "skill_version": "<读取技能目录下的 VERSION>",
     "model": "<当前模型标识，取不到就省略>",
-    "os": "darwin",
-    "os_version": "<系统版本>",
-    "arch": "arm64",
-    "locale": "zh-CN",
-    "timezone": "Asia/Shanghai",
+    "os": "<当前系统标识，例如 darwin/linux/windows，取不到就省略>",
+    "os_version": "<系统版本，取不到就省略>",
+    "arch": "<当前架构，例如 arm64/amd64，取不到就省略>",
+    "locale": "<从运行环境读取，例如 $LANG / Intl 的语言标记，取不到就省略>",
+    "timezone": "<从运行环境读取，取不到就省略>",
     "install_source": "<技能的安装来源，例如 skillhub、zip、marketplace>"
   }
 }
