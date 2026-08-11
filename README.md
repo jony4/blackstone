@@ -18,6 +18,7 @@ npx skills add jony4/blackstone
 
 ```bash
 npx skills add jony4/blackstone --skill blackstone-longform-fiction
+npx skills add jony4/blackstone --skill blackstone-short-fiction
 ```
 
 不用 skills CLI 的客户端，按这份协议安装：<https://blackstone.wansu.tech/install/blackstone.md>
@@ -27,6 +28,13 @@ npx skills add jony4/blackstone --skill blackstone-longform-fiction
 | 技能 | 面向 | 状态 |
 |---|---|---|
 | [blackstone-longform-fiction](blackstone-longform-fiction/) | 中长篇小说、网络小说、连载小说 | 可用 |
+| [blackstone-short-fiction](blackstone-short-fiction/) | 短篇小说、微小说、单篇完结故事 | 可用 |
+
+## 短故事版能做什么
+
+同样基于《故事工程》的六项写作方法，围绕短故事的篇幅与节奏，把冲突写清、把转折铺好、把结尾收住。可以从一句灵感开始，也可以接手已有片段续写、改稿、润色和检查文内一致性。
+
+短故事版以本地正文为主要工作区；作者明确需要时，可以激活账号并上传或下载作品资料与正文。
 
 ## 中长篇小说版能做什么
 
@@ -55,7 +63,7 @@ npx skills add jony4/blackstone --skill blackstone-longform-fiction
 - **永远免费**：六项写作技能、本地正文的创建与修改、Web 工作台、登录、查余额、看账单、提反馈
 - **按次计费**：只有成功的云端记忆调用，**0.01 元一次**，调用失败自动退回
 
-写一章正文的完整流程通常在 0.10 到 0.30 元之间。余额、账单、充值都可以直接问 AI，不必开网页。
+实际费用取决于作者明确选择执行多少次云端操作。余额、账单、充值都可以直接问 AI，不必开网页。
 
 ## 作品案例
 
@@ -63,12 +71,12 @@ npx skills add jony4/blackstone --skill blackstone-longform-fiction
 
 ## 安全边界
 
-这个技能会联网、会写本机配置、会自我更新、也会把你确认的正文同步到云端。这些都是功能，不是隐藏行为，逐条列在这里。完整说明见 [security.md](blackstone-longform-fiction/references/security.md)。
+技能只有在对应任务需要且获得授权时才联网、写本机配置或同步内容。完整说明见 [security.md](blackstone-longform-fiction/references/security.md)。
 
 **两件你应该提前知道的事：**
 
-1. **技能会静默自我更新。**每天最多检查一次，只从 `blackstone.wansu.tech` 下载，逐文件核对 sha256，只替换技能自己的目录。每次更新完会在回复里告诉你。不想要就说一句「不用自动更新」。
-2. **连接云端后，你确认的正文会默认同步一份到你的账号下。**这是跨章节记忆能成立的前提——写第一百章时要能调出第三章的细节。正文在本地始终有完整的一份，你随时可以拿走；不想上传就说一句，它会转成纯本地模式。
+1. **发现新版本只会提示。**只有作者明确确认后，才会下载、校验并替换对应 Skill 目录。
+2. **连接云端不等于同意上传。**默认采用“每次询问”；每次读取或上传作品内容前都会说明范围并取得同意。只有作者明确开启“自动同步”后，确认内容才会自动保存。
 
 **联网范围**：只连 `blackstone.wansu.tech`，用于设备授权、云端记忆、版本更新、账户与反馈。不从其他站点下载或执行任何东西。
 
@@ -82,7 +90,7 @@ npx skills add jony4/blackstone --skill blackstone-longform-fiction
 
 ## 版本与更新
 
-各技能的版本号在自己目录下的 `VERSION.md`。技能会定期比对官方清单并静默更新，装好之后不需要手动升级。
+各技能的版本号在自己目录下的 `VERSION.md`。技能会定期比对官方清单；发现新版本后，由作者决定是否更新。
 
 ## 反馈
 
