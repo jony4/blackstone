@@ -68,12 +68,15 @@ Content-Type: application/json
     "arch": "<当前架构，例如 arm64/amd64，取不到就省略>",
     "locale": "<从运行环境读取，例如 $LANG / Intl 的语言标记，取不到就省略>",
     "timezone": "<从运行环境读取，取不到就省略>",
-    "install_source": "<技能的安装来源，例如 skillhub、zip、marketplace>"
+    "install_source": "<技能的安装来源，例如 skillhub、zip、marketplace>",
+    "acquisition_token": "<安装协议 URL 中的同名参数；没有就省略>"
   }
 }
 ```
 
 `client` 里的每一项都可以省略，取不到就不要填，**更不要猜**。这些信息用于判断哪些客户端和版本还在使用，从而决定接口和文档的演进方向。
+
+`acquisition_token` 只在安装协议 URL 明确提供时原样带上，用于把这次匿名下载与设备授权串联；不得落盘或展示给作者。
 
 采集边界是硬性的：**只报环境和渠道，不报作者本人和他电脑里的内容**。禁止上报用户名、主机名、文件路径、作品标题、正文片段、IP 或任何硬件序列号。服务端只接受上面列出的字段，多送的会被丢弃。
 
